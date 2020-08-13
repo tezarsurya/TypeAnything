@@ -132,7 +132,7 @@ export const Layout = (props) => {
           value="/posts"
           label="Posts"
           icon={
-            spinner && router.pathname !== "/posts" ? (
+            spinner && router.pathname !== "/posts" && value === "/posts" ? (
               <CircularProgress
                 variant="indeterminate"
                 color="secondary"
