@@ -17,6 +17,7 @@ import ViewListIcon from "@material-ui/icons/ViewList";
 import HomeIcon from "@material-ui/icons/Home";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import { ScrollTop } from "./ScrollTop";
+import { ThreeHorseLoading } from "react-loadingg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     position: "fixed",
     bottom: 0,
+  },
+  spinner: {
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 }));
 
@@ -122,11 +127,35 @@ export const Layout = (props) => {
         }}
         showLabels
       >
-        <BottomNavigationAction value="/" label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction
+          value="/"
+          label="Home"
+          icon={
+            spinner && router.pathname !== "/" && value === "/" ? (
+              <CircularProgress
+                variant="indeterminate"
+                color="secondary"
+                size={24}
+              />
+            ) : (
+              <HomeIcon />
+            )
+          }
+        />
         <BottomNavigationAction
           value="/write"
           label="Write"
-          icon={<CreateIcon />}
+          icon={
+            spinner && router.pathname !== "/write" && value === "/write" ? (
+              <CircularProgress
+                variant="indeterminate"
+                color="secondary"
+                size={24}
+              />
+            ) : (
+              <CreateIcon />
+            )
+          }
         />
         <BottomNavigationAction
           value="/posts"
