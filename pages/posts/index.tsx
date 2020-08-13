@@ -1,7 +1,6 @@
 import fetch from "isomorphic-unfetch";
 import { Card, CardContent, Typography, makeStyles } from "@material-ui/core";
 import { Layout } from "../../components/Layout";
-import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   card: {
