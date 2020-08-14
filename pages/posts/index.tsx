@@ -31,7 +31,7 @@ const allPosts = (props) => {
 };
 
 export async function getServerSideProps() {
-  const response = await fetch(`https://typeanything.herokuapp.com/api/posts`);
+  const response = await fetch(`${process.env.API_URL}/posts`);
   const posts = await response.json();
 
   return { props: { posts: posts } };
