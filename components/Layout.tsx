@@ -57,10 +57,6 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     bottom: 0,
   },
-  spinner: {
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
 }));
 
 export const Layout = (props) => {
