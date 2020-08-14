@@ -17,7 +17,6 @@ import ViewListIcon from "@material-ui/icons/ViewList";
 import HomeIcon from "@material-ui/icons/Home";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import { ScrollTop } from "./ScrollTop";
-import { ThreeHorseLoading } from "react-loadingg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
