@@ -1,6 +1,6 @@
 const db = require("mongoose");
 
-const uneg_unegSchema = new db.Schema(
+module.exports.postSchema = new db.Schema(
   {
     title: {
       type: String,
@@ -21,4 +21,4 @@ const uneg_unegSchema = new db.Schema(
   { timestamps: true }
 );
 
-module.exports = db.model("uneg_uneg", uneg_unegSchema);
+module.exports.Post = db.model("posts", module.exports.postSchema);
